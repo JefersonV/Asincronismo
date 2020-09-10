@@ -1,0 +1,21 @@
+{
+  "name": "asincronismo-api",
+  "version": "1.0.0",
+  "description": "trabajar con asincronismo en Javascript\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[S",
+  "main": "src/index.js",
+  "scripts": {
+    "callback": "node src/callback/index.js",
+    "callback:challenge": "node src/callback/challenge.js"
+  },
+  "keywords": [
+    "callbacks",
+    "promesas",
+    "y",
+    "async-await"
+  ],
+  "author": "Jeferson",
+  "license": "MIT",
+  "dependencies": {
+    "xmlhttprequest": "^1.8.0"
+  }
+}
