@@ -35,16 +35,15 @@ function fetchData(url_api, callback) {
 }
 
 /* --------- MÚLTIPLES PETICIONES A UNA API CON CALLBACKS --------- */
-
-// primero buscamos la lista de personajes
+// 1 -> buscamos la lista de personajes
 fetchData(API, (error1, data1) => {
     // si error, matamos retornando un error
     if(error1) return console.error(error1);
-    // luego buscamos en la api el id de Rick
+    // 2 -> luego buscamos en la api el id de Rick
     fetchData(API + data1.results[0].id, (error2, data2) => {
       // si error, matamos retornando un error
       if(error2) return console.error(error2);
-      // por ultimo la consulta a la api que contiene su dimension
+      // 3 -> por último la consulta a la api que contiene su dimension
       fetchData(data2.origin.url, (error3, data3) => {
         // si error, matamos retornando un error
         if(error3) return console.error(error3);
@@ -62,3 +61,5 @@ fetchData(API, (error1, data1) => {
       });
     });
   });
+
+

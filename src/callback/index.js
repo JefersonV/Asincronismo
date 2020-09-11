@@ -22,9 +22,10 @@ function date(callback){
         callback(date)
     },3000)
 }
-
+/* Esta función representa el cuerpo del callback,
+   puede ser cualquier función, incluso una anónima */
 function printDate(dateNow){
     console.log(dateNow)
 }
-
+ 
 date(printDate)
